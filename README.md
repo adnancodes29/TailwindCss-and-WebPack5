@@ -1,1 +1,1 @@
-# TailwindCss-and-WebPack5
+How to use webpack and tailwindcss
