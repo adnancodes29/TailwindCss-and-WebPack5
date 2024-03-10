@@ -26,3 +26,21 @@ Now open up terminal in vsc by pressing ctrl + ` (Backtick) and select cmd inste
 
 <h2>Setting webpack.config.js</h2>
 <p>After installing webpack and dependencies make webpack.config.js file in root of your folder and the following:</p>
+<p>Code snippet <a href="https://gist.github.com/adnancodes29/8aa7374f0f1d28a2dccaee30503978a5">here</a>.</p>
+
+<p>The next step is to create more files.<br>
+Create index.html in root of folder.<br>
+Webpack will use that index.html to generate final HTML.<br>
+Create folder named "src" and "index.js" in it.<br></p>
+
+<h3>Your project folder should look like this:</h3>
+
+<p>Your project name: <br>
+|- node_modules <br>
+| - src <br>
+  |- index.js <br>
+|- index.html <br>
+|- package.json <br>
+|- webpackconfig.js <br>
+|- yarn.lock <br>
+</p>
