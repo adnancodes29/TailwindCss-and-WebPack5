@@ -1,3 +1,4 @@
 import './style.css'
 
-console.log('Hello world');
+//Delete this 
+//alert('Hello world');
