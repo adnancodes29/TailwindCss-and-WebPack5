@@ -27,7 +27,7 @@ Now open up terminal in vsc by pressing ctrl + ` (Backtick) and select cmd inste
 <h2>Setting webpack.config.js</h2>
 <p>After installing webpack and dependencies make webpack.config.js file in root of your folder and the following:</p>
 
-```
+```javascript
   const HtmlWebpackPlugin = require('html-webpack-plugin');
   const path = require('path');
   const isProduction = process.env.NODE_ENV === 'production';
@@ -90,3 +90,48 @@ Create folder named "src" and "index.js" in it.<br></p>
 |- webpackconfig.js <br>
 |- yarn.lock <br>
 </p>
+
+<p>To make sure everything is working great let's writte some code.</p>
+
+<p>index.html</p>
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TailwindCss &amp; WebPack5</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+</body>
+</html>
+```
+
+<p>index.js</p>
+
+```javascript
+console.log('Hello world');
+```
+
+<p>Update <b>package.json</b> with following commands:</p>
+<p>Add a comma after the penultimate curly bracket and paste the following:</p>
+
+```json
+"scripts": {
+    "build": "webpack --mode=production --node-env=production",
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch"
+  }
+```
+
+<p>Now get back to terminal again and run <b>"yarn build:dev"</b> <br>
+This command will make <b>"dist" folder</b> and <b>index.html</b> and <b>index.js</b> files in it.<br>
+Go to <b>"dist"</b> folder and open <b>index.html</b> in <b>browser.</b> If everthing is ok you should see just like this:
+img here</p>
+
+```
+yarn build:dev
+```
