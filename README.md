@@ -26,8 +26,54 @@ Now open up terminal in vsc by pressing ctrl + ` (Backtick) and select cmd inste
 
 <h2>Setting webpack.config.js</h2>
 <p>After installing webpack and dependencies make webpack.config.js file in root of your folder and the following:</p>
-<p>Code snippet <a href="https://gist.github.com/adnancodes29/8aa7374f0f1d28a2dccaee30503978a5">here</a>.</p>
 
+```
+  const HtmlWebpackPlugin = require('html-webpack-plugin');
+  const path = require('path');
+  const isProduction = process.env.NODE_ENV === 'production';
+
+  const stylesHandler = 'style-loader';
+
+  const config  = {
+    entry: './src/index.js',
+    output: {
+      path: path.resolve(__dirname, './dist'),
+      filename: 'main.js',
+      clean: true,
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+      template: 'index.html',
+      }),
+  ],
+      module: {
+        rules: [
+        {
+        test: /\.(js|jsx)$/i,
+        loader: 'babel-loader',
+      },
+      {
+        test: /\.css$/i,
+        use: [stylesHandler, 'css-loader', 'postcss-loader'],
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+        type: 'asset',
+      },
+    ],
+  },
+};
+
+module.exports = () => {
+  if (isProduction) {
+    config.mode = 'production';
+  } else {
+    config.mode = 'development';
+  }
+  return config;
+};
+
+```
 <p>The next step is to create more files.<br>
 Create index.html in root of folder.<br>
 Webpack will use that index.html to generate final HTML.<br>
