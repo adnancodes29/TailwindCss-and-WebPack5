@@ -1,14 +1,12 @@
 [![My Skills](https://skillicons.dev/icons?i=webpack,tailwind)](https://skillicons.dev)
 
-[![My Skills](https://skillicons.dev/icons?i=webpack,tailwind)](https://skillicons.dev)
-
 # How to use tailwind with webpack
 
-Before start make sure you have installed **node.js** and **yarn**
-  Download **node.js** [here](https://nodejs.org/en)
-  After installing **node.js** install **yarn**
-  Open up **terminal** and type **"npm install --global yarn"**
-  After installation is complete type **"yarn --version"** to see what version do you have
+Before start make sure you have installed **node.js** and **yarn**  
+Download **node.js** [here](https://nodejs.org/en)  
+After installing **node.js** install **yarn**  
+Open up **terminal** and type **"npm install --global yarn"**  
+After installation is complete type **"yarn --version"** to see what version do you have  
 
 ```
 npm install --global yarn
@@ -18,10 +16,10 @@ npm install --global yarn
 yarn --version
 ```
 
-In terminal type** mkdir name of your project** to make new folder then **cd name of your project**
-  Type **yarn init -yp**
-  If you are using visual studio code just type code . it will automaticly open vscode 
-  Now open up terminal in vsc by pressing **ctrl + `** (backtack) and select **cmd** instead **powershell**
+In terminal type **mkdir name of your project** to make new folder then **cd name of your project**  
+Type **yarn init -yp**  
+If you are using visual studio code just type code . it will automaticly open vscode   
+Now open up terminal in vsc by pressing **ctrl + `** (backtack) and select **cmd** instead **powershell**  
 
 ```
 mkdir project name
@@ -106,10 +104,11 @@ module.exports = () => {
 };
 ```
 
-The next step is to create more files.
-  Create **index.html** in root of folder.
-  > [!NOTE] Webpack will use that index.html to generate final HTML.
-  Create folder named **"src"** and **"index.js"** in it.
+## Creating more files
+
+Create **index.html** in root of folder.  
+[!NOTE] Webpack will use that index.html to generate final HTML.  
+Create folder named **"src"** and **"index.js"** in it.  
 
 Your project folder should look like this:
 
@@ -192,7 +191,8 @@ Create **style.css** file in **src** folder and add the following:
 
 Now we can use **tailwindcss**. To test this we can add next **class** to our **body tag**.
 
-> [!NOTE] And delete alert function from src/index.js to stop annoying alert and import style.css just like this:
+> [!NOTE]
+> Delete alert function from src/index.js to stop annoying alert and import style.css just like this:
 
 ```javascript
 import './style.css'
