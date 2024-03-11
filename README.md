@@ -121,10 +121,17 @@ Your project name
 |- webpackconfig.js
 |- yarn.lock
 
+<<<<<<< HEAD
 To make everything is working great in **src/index.js** type **"alert("Hello World");"** and in **index.html** **Hello World**
 
 Update **package.json** with following commands:  
 Add a **comma** after the **penultimate curly bracket** and paste the following:
+=======
+To make everything is working great in **src/index.js** type **"alert("Hello World");"** and in **index.html** **<h1>Hello World</h1>**
+
+Update **package.json** with following commands:
+  Add a **comma** after the **penultimate curly bracket** and paste the following:
+>>>>>>> 5c4723a882d459aeeffd83e6b747ae2368a3003d
 
 ```javascript
 "scripts": {
@@ -135,10 +142,17 @@ Add a **comma** after the **penultimate curly bracket** and paste the following:
   }
 ```
 
+<<<<<<< HEAD
 Now get back to terminal againg and run **yarn build:dev**  
 This command will make **dist** folder and **index.html** and **index.js** files in it.  
 Go to **dist** folder and open **index.html** in **browser**.  
 If everthing is ok you should see just like this:  
+=======
+Now get back to terminal againg and run **yarn build:dev**
+  This command will make **dist** folder and **index.html** and **index.js** files in it.
+  Go to **dist** folder and open **index.html** in **browser**.
+  If everthing is ok you should see just like this:
+>>>>>>> 5c4723a882d459aeeffd83e6b747ae2368a3003d
 
 ```
 yarn build:dev
