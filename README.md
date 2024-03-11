@@ -1,12 +1,14 @@
 [![My Skills](https://skillicons.dev/icons?i=webpack,tailwind)](https://skillicons.dev)
 
+[![My Skills](https://skillicons.dev/icons?i=webpack,tailwind)](https://skillicons.dev)
+
 # How to use tailwind with webpack
 
-Before start make sure you have installed node.js and yarn
-Download here node.js
-After installing node.js install yarn
-Open up terminal and type "npm install --global yarn" - don't copy quotes
-After installation is complete type "yarn --version" to see what version do you have
+Before start make sure you have installed **node.js** and **yarn**
+  Download **node.js** [here](https://nodejs.org/en)
+  After installing **node.js** install **yarn**
+  Open up **terminal** and type **"npm install --global yarn"**
+  After installation is complete type **"yarn --version"** to see what version do you have
 
 ```
 npm install --global yarn
@@ -16,10 +18,10 @@ npm install --global yarn
 yarn --version
 ```
 
-In terminal type mkdir "name of your project" to make new folder then cd "name of your project"
-Type "yarn init -yp"
-If you are using visual studio code just type code . it will automaticly open vscode 
-Now open up terminal in vsc by pressing ctrl + ` (backtack) and select cmd instead powershell
+In terminal type** mkdir name of your project** to make new folder then **cd name of your project**
+  Type **yarn init -yp**
+  If you are using visual studio code just type code . it will automaticly open vscode 
+  Now open up terminal in vsc by pressing **ctrl + `** (backtack) and select **cmd** instead **powershell**
 
 ```
 mkdir project name
@@ -32,10 +34,9 @@ cd project name
 ```
 yarn init -yp
 ```
+Now you should have file named **package.json** in your project.
 
-You should have just package.json
-
-## Next step is to add Webpack and other dependencies
+## Installing Webpack and other dependencies
 
 In terminal type this commands:
 ```
@@ -56,7 +57,7 @@ yarn add -D style-loader
 ```
 yarn add -D css-loader	
 ```
-After installing webpack and dependencies make webpack.config.js file in root of your folder and the following:
+After installing **webpack** and **dependencies** make **webpack.config.js** file in root of your folder and the following:
 
 ```javascript
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -106,9 +107,9 @@ module.exports = () => {
 ```
 
 The next step is to create more files.
-Create index.html in root of folder.
-Webpack will use that index.html to generate final HTML.
-Create folder named "src" and "index.js" in it.
+  Create **index.html** in root of folder.
+  > [!NOTE] Webpack will use that index.html to generate final HTML.
+  Create folder named **"src"** and **"index.js"** in it.
 
 Your project folder should look like this:
 
@@ -121,10 +122,10 @@ Your project name
 |- webpackconfig.js
 |- yarn.lock
 
-To make everything is working great in src/index.js type "alert("Hello World");" and in index.html <h1>Hello World</h1>
+To make everything is working great in **src/index.js** type **"alert("Hello World");"** and in **index.html** **<h1>Hello World</h1>**
 
-Update package.json with following commands:
-Add a comma after the penultimate curly bracket and paste the following:
+Update **package.json** with following commands:
+  Add a **comma** after the **penultimate curly bracket** and paste the following:
 
 ```javascript
 "scripts": {
@@ -135,9 +136,10 @@ Add a comma after the penultimate curly bracket and paste the following:
   }
 ```
 
-Now get back to terminal againg and run "yarn build:dev"
-This command will make "dist" folder and index.html and index.js files in it.
-Go to "dist" folder and open index.html in browser. If everthing is ok you should see just like this:
+Now get back to terminal againg and run **yarn build:dev**
+  This command will make **dist** folder and **index.html** and **index.js** files in it.
+  Go to **dist** folder and open **index.html** in **browser**.
+  If everthing is ok you should see just like this:
 
 ```
 yarn build:dev
@@ -147,7 +149,7 @@ img here
 
 
 
-Create "postcss.config.js" on the root directory and add the following: 
+Create **"postcss.config.js"** on the root directory and add the following: 
 
 ```javascript
 module.exports = {
@@ -158,7 +160,7 @@ module.exports = {
 };
 ```
 
-Again back to terminal and run next command "yarn tailwindcss init". This will generate a file called tailwind.config.js, open it and add the following:
+Again back to terminal and run next command **yarn tailwindcss init**. This will generate a file called **tailwind.config.js**, open it and add the following:
 
 ```
 yarn tailwindcss init
@@ -181,17 +183,18 @@ module.exports = {
 }
 ```
 
-Create style.css file in src folder and add the following:
+Create **style.css** file in **src** folder and add the following:
 ```
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 ```
 
-Now we can use "tailwindcss". To test this we can add next class to our body tag.
-And delete alert function from src/index.js to stop annoying alert and import style.css just like this:
+Now we can use **tailwindcss**. To test this we can add next **class** to our **body tag**.
 
-```
+> [!NOTE] And delete alert function from src/index.js to stop annoying alert and import style.css just like this:
+
+```javascript
 import './style.css'
 ```
  
