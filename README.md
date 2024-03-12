@@ -112,7 +112,7 @@ Create folder named **"src"** and **"index.js"** in it.
 
 Your project folder should look like this:
 
-[!project structure](https://github.com/[adnancodes29]/[TailwindCss-and-WebPack5]/blob/[main]/images/folder-structure-1.jpg?raw=true)
+![folder-structure-1](https://github.com/adnancodes29/TailwindCss-and-WebPack5/assets/162288583/ba8e6597-0d0b-418a-b7cf-9194b826daed)
 
 To make everything is working great in **src/index.js** type **"alert("Hello World");"** and in **index.html** **Hello World**
 
@@ -132,23 +132,19 @@ Add a **comma** after the **penultimate curly bracket** and paste the following:
   }
 ```
 
-Now get back to terminal againg and run **yarn build:dev**  
-This command will make **dist** folder and **index.html** and **index.js** files in it.  
-Go to **dist** folder and open **index.html** in **browser**.  
-If everthing is ok you should see just like this:  
+![package-json](https://github.com/adnancodes29/TailwindCss-and-WebPack5/assets/162288583/0e66e67c-2505-441a-9f0b-c663b272e594)
 
 Now get back to terminal againg and run **yarn build:dev**  
 This command will make **dist** folder and **index.html** and **index.js** files in it.  
-Go to **dist** folder and open **index.html** in **browser**.  
-If everthing is ok you should see just like this:
+Go to **dist** folder and open **index.html** in **browser**.   
 
 ```
 yarn build:dev
 ```
+If everthing is ok you should see just like this: 
 
-img here
 
-
+![first-run](https://github.com/adnancodes29/TailwindCss-and-WebPack5/assets/162288583/94d9c887-fbd5-4b3b-8ba7-4cb950578da9)
 
 Create **"postcss.config.js"** on the root directory and add the following: 
 
@@ -161,12 +157,15 @@ module.exports = {
 };
 ```
 
+![postconfigcss](https://github.com/adnancodes29/TailwindCss-and-WebPack5/assets/162288583/5c5e5356-2db3-4532-ac1d-dcc8929b38d5)
+
 Again back to terminal and run next command **yarn tailwindcss init**. This will generate a file called **tailwind.config.js**, open it and add the following:
 
 ```
 yarn tailwindcss init
 
 ```
+
 ```javascript
 module.exports = {
   purge: [
@@ -184,6 +183,8 @@ module.exports = {
 }
 ```
 
+![tailwindcss-config](https://github.com/adnancodes29/TailwindCss-and-WebPack5/assets/162288583/22d4c746-c5da-412e-9999-19b5639e7733)
+
 Create **style.css** file in **src** folder and add the following:
 ```
 @import "tailwindcss/base";
@@ -191,7 +192,10 @@ Create **style.css** file in **src** folder and add the following:
 @import "tailwindcss/utilities";
 ```
 
-Now we can use **tailwindcss**. To test this we can add next **class** to our **body tag**.
+![style css](https://github.com/adnancodes29/TailwindCss-and-WebPack5/assets/162288583/077dd613-72fb-4538-8fcc-2a09fc68eda8)
+
+Now we can use **tailwindcss**.  
+To test this we can add next **class** to our **body tag**.
 
 > [!NOTE]
 > Delete alert function from src/index.js to stop annoying alert and import style.css just like this:
@@ -199,5 +203,7 @@ Now we can use **tailwindcss**. To test this we can add next **class** to our **
 ```javascript
 import './style.css'
 ```
+![import-styles](https://github.com/adnancodes29/TailwindCss-and-WebPack5/assets/162288583/c650416f-75f5-48d4-aeeb-3eabb16ac74c)
+
  
 
